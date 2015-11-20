@@ -13,7 +13,6 @@ namespace Widop\Twitter\Options;
 
 interface OptionBagInterface extends \ArrayAccess, \IteratorAggregate
 {
-
     /**
      * Registers an option.
      *
