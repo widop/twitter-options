@@ -41,7 +41,9 @@ class OptionFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testCreate()
     {
-        $this->assertInstanceOf('Widop\Twitter\Options\AccuracyOption', $this->optionFactory->create('accuracy'));
+        $option = $this->optionFactory->create('accuracy');
+        $this->assertInstanceOf('Widop\Twitter\Options\AccuracyOption', $option);
+        $this->assertInstanceOf('Widop\Twitter\Options\OptionInterface', $option);
     }
 
     /**
