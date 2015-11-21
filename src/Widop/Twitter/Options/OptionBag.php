@@ -16,9 +16,9 @@ namespace Widop\Twitter\Options;
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class OptionBag implements \ArrayAccess, \IteratorAggregate
+class OptionBag implements OptionBagInterface
 {
-    /** @var \Widop\Twitter\Options\OptionFactory */
+    /** @var \Widop\Twitter\Options\OptionFactoryInterface */
     private $factory;
 
     /** @var array */
@@ -29,7 +29,7 @@ class OptionBag implements \ArrayAccess, \IteratorAggregate
      *
      * @param \Widop\Twitter\Options\OptionFactory|null $factory The option factory.
      */
-    public function __construct(OptionFactory $factory = null)
+    public function __construct(OptionFactoryInterface $factory = null)
     {
         $this->factory = $factory ?: new OptionFactory();
         $this->options = array();

@@ -11,14 +11,12 @@
 
 namespace Widop\Twitter\Options;
 
-use Widop\Twitter\Options\OptionInterface;
-
 /**
  * Option factory.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class OptionFactory
+class OptionFactory implements OptionFactoryInterface
 {
     /** @var array */
     private $mapping;
